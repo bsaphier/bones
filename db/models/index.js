@@ -14,7 +14,9 @@ const Order = require('./order');
 const Tag = require('./tag');
 
 // Create our own rockTag association table to be seeded with rockId and tagId
-const RockTags = require('APP/db').define('rockTags', {});
+// const RockTags = require('APP/db').define('rockTags', {});
+
+console.log(Address);
 
 User.hasMany(Order);
 Order.belongsTo(User);

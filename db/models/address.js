@@ -22,4 +22,5 @@ const Address = db.define('addresses', {
   }
 });
 
+
 module.exports = Address;
