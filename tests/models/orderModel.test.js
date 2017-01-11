@@ -1,6 +1,6 @@
+var db = require ('APP/db');
 var expect = require('chai').expect;
 var Order = require('APP/db/models/order');
-var db = require ('APP/db');
 
 
 describe('The `Order` model', function () {

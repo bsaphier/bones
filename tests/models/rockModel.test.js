@@ -1,6 +1,6 @@
+var db = require('APP/db');
 var expect = require('chai').expect;
 var Rock = require('APP/db/models/rock');
-var db = require('APP/db');
 var Category = require('APP/db/models/category');
 
 describe('The `Rock` model', function () {
