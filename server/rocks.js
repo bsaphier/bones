@@ -28,14 +28,16 @@ router.get('/:id', (req, res, next) => {
 });
 
 // add a rock
-router.post('/addRock', (req, res, next) => {
+// EI: RESTfulness
+router.post('/', (req, res, next) => {
   Rock.create(req.body)
     .then(rock => res.status(201).send(rock))
     .catch(next);
 });
 
 // edit a rock
-router.put('/edit/:id', (req, res, next) => {
+// EI: RESTfulness
+router.put('/:id', (req, res, next) => {
   Rock.findById(req.params.id)
     .then(rock => rock.update(req.body))
     .then(res.sendStatus(200))

@@ -40,7 +40,8 @@ router.post('/', (req, res, next) => {
     .catch(next);
 });
 
-router.put('/edit/:id', (req, res, next) => {
+// EI: change endpoint to follow REST conventions
+router.put('/:id', (req, res, next) => {
   Order.update(req.body, { where: { id: req.params.id }, returning: true
   })
     .then(updatedOrder => {

@@ -6,6 +6,8 @@ const User = db.model('users');
 
 const {mustBeLoggedIn, forbidden} = require('./auth.filters');
 
+// EI: may also want /api/users/:id/orders, etc...
+
 module.exports = require('express').Router()
 	.get('/', forbidden('only admins can list users'), (req, res, next) =>
 		User.findAll()

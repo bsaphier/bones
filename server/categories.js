@@ -26,13 +26,15 @@ router.get('/:id', (req, res, next) => {
 
 
 // add a category
-router.post('/addCategory', (req, res, next) => {
+// EI: more RESTful to post to `/categories` to create a new category
+router.post('/', (req, res, next) => {
   Category.create(req.body)
     .then(category => res.status(201).send(category))
     .catch(next);
 });
 
 // edit a category
+// EI: more RESTful to put to `/categories` to update a category
 router.put('/edit/:id', (req, res, next) => {
   Category.findById(req.params.id)
     .then(category => category.update(req.body))
