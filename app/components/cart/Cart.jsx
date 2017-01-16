@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 export default({ cartProducts }) => {
-  console.log('what is cartProducts', cartProducts);
+  // console.log('what is cartProducts', cartProducts);
 
   return(
     <div>

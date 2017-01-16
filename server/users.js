@@ -59,4 +59,6 @@ router.get('/:userId/orders', (req, res, next) => {
     .catch(next);
 });
 
+// EI: /:userId/cart to get user's cart?
+
 module.exports = router;

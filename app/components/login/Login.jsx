@@ -31,6 +31,7 @@ const Login = ({ login, logout, signup }) => (
           <TextField name="password" type="password" floatingLabelText="Password"/><br></br>
           <RaisedButton type="submit" label="Log In" primary={true} style={style.button}/>
         </form>
+      {/* EI: don't forget to take this out */}
         <RaisedButton label="Temporary Logout" secondary={true} onClick={evt => {
           evt.preventDefault();
           logout();
@@ -39,6 +40,7 @@ const Login = ({ login, logout, signup }) => (
 
       <Paper zDepth={1} style={style.paper}>
         <h1>New Customer Sign-Up</h1>
+      {/* EI: pass down from container component? nice now that this component is larger, and to keep anything that's non-presentational out... */}
         <form onSubmit={evt => {
             evt.preventDefault();
             signup(evt.target.firstName.value, evt.target.lastName.value, evt.target.email.value, evt.target.password.value );

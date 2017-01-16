@@ -5,6 +5,8 @@ import {shallow} from 'enzyme';
 
 import Jokes from 'APP/app/components/Jokes';
 
+// EI: write more component tests!
+
 describe('<Jokes />', () => {
   const joke = {
     q: 'Why did the skeleton write tests?',

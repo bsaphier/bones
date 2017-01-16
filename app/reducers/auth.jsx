@@ -28,9 +28,9 @@ export const signup = (firstName, lastName, email, password) =>
   dispatch => {
     axios.post('/api/users',
     {firstName, lastName, email, password})
-    .then((res) => {
-      dispatch(login(res.data.email, res.data.password))
-    })
+    // EI: nice to do this for more semantic variables
+    .then(res => res.data)
+    .then(user => dispatch(login(user.email, user.password)))
     .catch(() => dispatch(whoami()));
   }
 

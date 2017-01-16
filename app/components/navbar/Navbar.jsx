@@ -3,6 +3,7 @@ import { AppBar, FlatButton, Toolbar, ToolbarGroup, TextField, ToolbarTitle, Fon
 import NavbarMenu from './NavbarMenu';
 import { Link, IndexLink } from 'react-router';
 
+//EI: this can be a dumb component
 export default class Navbar extends Component {
   render() {
 

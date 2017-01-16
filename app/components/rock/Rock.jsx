@@ -26,7 +26,8 @@ const style = {
 
 export default ({ rock }) => {
   const { reviews } = rock;
-  console.log('here is rock reviews', reviews )
+  // EI: don't forget to take out console logs like these
+  // console.log('here is rock reviews', reviews )
 
   return (
     <GridList cellHeight={'40vh'} style={style.gridlist}>

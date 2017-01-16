@@ -23,7 +23,8 @@ router.get('/:orderId', (req, res, next) => {
 
 // Add product to existing shopping cart
 // Pass in req.body.rockQuantity. If rockQuanity is not set, it will be set to 1 by default.
-router.post('/user/:userId/rock/:rockId', (req, res, next) => {
+// EI: update to URI to make it more RESTful
+router.post('/user/:userId/cart/:rockId', (req, res, next) => {
   // Find the shopping cart of the user. If the shopping cart doesn't exist, create one
   Order.findOrCreate({
     where: {
